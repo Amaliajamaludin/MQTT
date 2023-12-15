@@ -2,7 +2,7 @@ import paho.mqtt.client as mqtt
 import time
 
 # Define MQTT settings
-MQTT_BROKER = "10.0.0.247"  # broker IP address
+MQTT_BROKER = "localhost"  # broker IP address
 MQTT_PORT = 1883
 MQTT_TOPIC_LOCK = "smart_lock/status"
 MQTT_TOPIC_TEMP_STATUS = "smart_lock/temp_status"
