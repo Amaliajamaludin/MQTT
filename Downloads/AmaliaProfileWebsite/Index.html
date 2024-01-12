@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="Style.css">
+        <title>Personal Portfolio Website</title>
+        <script src="https://kit.fontawesome.com/0193574c5a.js" crossorigin="anonymous"></script> <!--To add icon from the library-->
+    </head>
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src = "Images/logo.png" class="logo"> <!--add image on the header-->
+                <ul>
+                    <!--link to each section of the page-->
+                    <li><a href="#">Home</a></li> 
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Projects</a></li>
+                    <li><a href="#">Portfolio</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+
+            <div class="header-text"> <!--front page-->
+                <p>Software Engineer Student</p>
+                <h1>Hi, I'm
+                    <span> Amalia</span><br>Jamaludin from Malaysia</h1>
+            </div>
+        </div>
+    </div>
+<!--------------------------------About--------------------------------->
+<div id="about">
+    <div class="container">
+        <div class="row">
+            <div class="about-col-1"> <!--to put it side by side (image on the left)-->
+                <img src="Images/user.png">
+            </div>
+            <div class="about-col-2">
+                <h1 class="sub-title">About Me</h1> <!--to put about me details (on the right)-->
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed 
+                    do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+                    Ut enim ad minim veniam, quis nostrud exercitation ullamco 
+                    laboris nisi ut aliquip ex ea commodo consequat. Duis aute 
+                    irure dolor in reprehenderit in voluptate velit esse cillum 
+                    dolore eu fugiat nulla pariatur. Excepteur sint occaecat 
+                    cupidatat non proident, sunt in culpa qui officia deserunt 
+                    mollit anim id est laborum.</p>
+
+                <div class="tab-titles">
+                    <p class="tab-links active-link" onclick="opentab('skills')">Skils</p>
+                    <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                    <p class="tab-links" onclick="opentab('education')">Education</p>
+                </div>
+                <div class="tab-contents active-tab" id="skills">
+                    <ul>
+                        <li><span>UI/UX</span><br>Designing Web/App Interface</li>
+                        <li><span>Web Development</span><br>Web App Development</li>
+                        <li><span>App Development</span><br>Building Andoid/IOS apps</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="experience">
+                    <ul>
+                        <li><span>Petronas Upstream Data Intern, May 2023 - Aug 2023</span><br>
+                            Conducted data collection from various sources, ensuring data quality and reliability.<br>
+                            Prepared detailed reports summarizing key findings and actionable recommendations.<br>
+                            Assisted meetings in building software from the backend to the frontend.
+                            </li>
+                        <li><span>University of Michigan Researcher, Jan 2023 - Mar 2023</span><br>
+                            Participated in research meetings and conferences, presenting findings and engaging in discussions.<br>
+                            Assisted in the setup and maintenance of Raspberry Pi clusters for parallel computing, contributing to the research project
+                            </li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="education">
+                    <ul>
+                        <li><span>University of Michigan Dearborn, Aug 2021 - May 2025</span><br>Major in Software Engineering. <br> Major in Economics</li>
+                        <li><span>Taylor's University, Jul 2020 - May 2021</span><br>American Degree Transfer Programme</li>
+                        <li><span>Hulu Selangor Science School, Jan 2015 - Nov 2019</span><br>Sijil Pelajaran Malaysia(SPM) <br>Pentaksiran Tingkatan 3(PT3)</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!------------------------services--------------------->
+    <div id="services">
+        <div class="container">
+            <h1 class="sub-title">My Services</h1>
+            <div class="services-list">
+                <div>
+                    <i class="fa-solid fa-crop"></i>
+                    <h2>UI/UX Design</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed 
+                    do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                <a href="#">Learn More</a>
+                </div>
+                <div>
+                    <i class="fa-solid fa-code"></i>
+                    <h2>Web Design</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed 
+                        do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                    <a href="#">Learn More</a>
+                </div>
+                <div>
+                    <i class="fa-brands fa-app-store"></i>
+                    <h2>App Design</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed 
+                        do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                    <a href="#">Learn More</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-------------portfolio------------->
+<div id="portfolio">
+    <div class="container">
+        <h1 class=""sub-title>My Work</h1>
+    </div>
+</div>
+
+<script>
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link")
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab")
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+</script>
+</body>
+
+</html>
